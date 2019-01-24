@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,122 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SimpleGame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="LEVEL 1 PLAGUE RAT" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="15" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dk1-gC-rZF">
+                                <rect key="frame" x="0.0" y="54.000000000000007" width="375" height="65.666666666666686"/>
+                                <fontDescription key="fontDescription" name="Georgia-Bold" family="Georgia" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleAspectFit" verticalHuggingPriority="252" verticalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pjE-8F-q72">
+                                <rect key="frame" x="43.666666666666657" y="129.66666666666663" width="288" height="436"/>
+                                <state key="normal" image="Plague Rat"/>
+                                <connections>
+                                    <action selector="mobClickNormal:" destination="BYZ-38-t0r" eventType="touchDown" id="yhV-3o-Xds"/>
+                                </connections>
+                            </button>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="1" translatesAutoresizingMaskIntoConstraints="NO" id="dX9-N6-rTE">
+                                <rect key="frame" x="37.666666666666657" y="575.66666666666663" width="300" height="10"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="10" id="ucz-vu-zeR"/>
+                                </constraints>
+                                <color key="progressTintColor" red="0.032125217740000003" green="1" blue="3.3306690740000002e-16" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="trackTintColor" red="0.66856361040609136" green="0.0047722908877932957" blue="0.10533973942211604" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </progressView>
+                            <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" verticalHuggingPriority="249" verticalCompressionResistancePriority="751" distribution="fillEqually" alignment="center" spacing="38" translatesAutoresizingMaskIntoConstraints="NO" id="gyE-pS-SVf">
+                                <rect key="frame" x="0.0" y="595.66666666666663" width="375" height="121.66666666666663"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="BAL-x6-KR5">
+                                        <rect key="frame" x="0.0" y="21" width="168.66666666666666" height="80"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="GOLD" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q9s-aO-f8T">
+                                                <rect key="frame" x="59.333333333333343" y="0.0" width="49.666666666666657" height="30"/>
+                                                <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="30"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AUp-XW-BtS">
+                                                <rect key="frame" x="78.666666666666671" y="50" width="11.333333333333329" height="30"/>
+                                                <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="30"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="tAE-iH-VcX">
+                                        <rect key="frame" x="206.66666666666663" y="21" width="168.33333333333337" height="80"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ENEMIES SLAIN" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Db-ww-GzA">
+                                                <rect key="frame" x="13" y="0.0" width="142.33333333333334" height="30"/>
+                                                <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="30"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R9C-bv-lbo">
+                                                <rect key="frame" x="78.333333333333343" y="50" width="11.333333333333329" height="30"/>
+                                                <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="30"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="752" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H20-e5-hc8">
+                                <rect key="frame" x="0.0" y="727.33333333333337" width="375" height="40.666666666666629"/>
+                                <color key="backgroundColor" red="0.86126572132935708" green="0.8823564403553299" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="25"/>
+                                <state key="normal" title="Buy 10 Damage for 1 Gold">
+                                    <color key="titleColor" red="0.38396896857269619" green="0.40547668147208127" blue="0.00013642898654845175" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="shopTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="op6-2T-gn1"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="H20-e5-hc8" firstAttribute="height" relation="lessThanOrEqual" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.05" id="5sz-BS-Lde"/>
+                            <constraint firstItem="gyE-pS-SVf" firstAttribute="top" secondItem="dX9-N6-rTE" secondAttribute="bottom" constant="10" id="72o-iC-h7H"/>
+                            <constraint firstItem="H20-e5-hc8" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="HIR-B5-Roc"/>
+                            <constraint firstItem="pjE-8F-q72" firstAttribute="top" secondItem="dk1-gC-rZF" secondAttribute="bottom" constant="10" id="SgV-hk-bTj"/>
+                            <constraint firstItem="gyE-pS-SVf" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Wsj-LU-5fz"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="H20-e5-hc8" secondAttribute="bottom" constant="10" id="Zu0-NY-fH6"/>
+                            <constraint firstItem="H20-e5-hc8" firstAttribute="top" secondItem="gyE-pS-SVf" secondAttribute="bottom" constant="10" id="fRz-Lg-FEA"/>
+                            <constraint firstItem="dk1-gC-rZF" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="ghT-tF-RdT"/>
+                            <constraint firstItem="dk1-gC-rZF" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="mjd-MQ-L6t"/>
+                            <constraint firstItem="dX9-N6-rTE" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="n26-Tn-CQi"/>
+                            <constraint firstItem="dX9-N6-rTE" firstAttribute="top" secondItem="pjE-8F-q72" secondAttribute="bottom" constant="10" id="p4h-Ju-1P0"/>
+                            <constraint firstItem="pjE-8F-q72" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="qKy-bX-oVw"/>
+                            <constraint firstItem="dk1-gC-rZF" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="t33-VP-Z3t"/>
+                            <constraint firstItem="H20-e5-hc8" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="vhC-UV-uEd"/>
+                            <constraint firstItem="gyE-pS-SVf" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="x3s-qL-toX"/>
+                            <constraint firstItem="gyE-pS-SVf" firstAttribute="height" relation="lessThanOrEqual" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.15" id="xzd-Ob-ZBF"/>
+                            <constraint firstItem="dX9-N6-rTE" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.8" id="yRf-4Y-Lyd"/>
+                            <constraint firstItem="dk1-gC-rZF" firstAttribute="height" relation="lessThanOrEqual" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.15" id="zMx-P2-fNR"/>
+                            <constraint firstItem="pjE-8F-q72" firstAttribute="width" relation="lessThanOrEqual" secondItem="8bC-Xf-vdC" secondAttribute="width" id="zdY-38-Cqi"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="ShopButton" destination="H20-e5-hc8" id="0je-v1-zDa"/>
+                        <outlet property="goldValue" destination="AUp-XW-BtS" id="9Zp-ux-No8"/>
+                        <outlet property="healthBar" destination="dX9-N6-rTE" id="aNm-1D-cug"/>
+                        <outlet property="levelText" destination="dk1-gC-rZF" id="nUM-VX-zg7"/>
+                        <outlet property="mobClick" destination="pjE-8F-q72" id="wKg-tf-x8B"/>
+                        <outlet property="slayValue" destination="R9C-bv-lbo" id="svc-po-rUc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="47.826086956521742" y="24.107142857142858"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Plague Rat" width="288" height="436"/>
+    </resources>
 </document>
